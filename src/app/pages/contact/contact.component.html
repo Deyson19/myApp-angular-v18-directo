@@ -1,0 +1,47 @@
+<div class="container-fluid">
+  <form
+    class="row g-3 needs-validation"
+    novalidate
+    (ngSubmit)="onSubmit()"
+    [formGroup]="contactForm"
+  >
+    <div class="col-md-4">
+      <label for="validationCustom01" class="form-label"
+        >Asunto del correo</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        id="validationCustom01"
+        formControlName="asunto"
+        required
+      />
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustom02" class="form-label">Email</label>
+      <input
+        type="text"
+        class="form-control"
+        id="validationCustom02"
+        formControlName="email"
+      />
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustomUsername" class="form-label">Mensaje</label>
+      <div class="input-group">
+        <input
+          type="text"
+          class="form-control"
+          id="validationCustomUsername"
+          aria-describedby="inputGroupPrepend"
+          formControlName="mensaje"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit">Submit form</button>
+    </div>
+  </form>
+</div>
