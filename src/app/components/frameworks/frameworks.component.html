@@ -1,0 +1,17 @@
+<h2 class="text-center text-info">Información de los Frameworks</h2>
+
+<p>
+  <strong>Angular</strong>
+</p>
+<pre>{{ angular | json }}</pre>
+<pre>{{ frameworksList | json }}</pre>
+
+<ul class="list-group list-group-numbered">
+  @for (framework of frameworksList(); track framework.version) {
+
+  <li class="list-group-item">
+    {{ framework.name }}
+    <span class="badge">{{ framework.version }}</span>
+  </li>
+  }
+</ul>
