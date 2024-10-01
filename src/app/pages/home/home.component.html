@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <section class="d-flex justify-content-center">
+    <h1 class="text-center text-primary">
+      {{ descripcion }}
+    </h1>
+  </section>
+  <br />
+  <p>
+    {{ frameworkName }}
+  </p>
+  <p>Propiedad simple en angular: {{ isLive }}</p>
+  <p>Propiedad como una señal: {{ isOffline() }}</p>
+
+  <button class="btn btn-outline-info" (click)="onChangeName()">
+    Cambiar Nombre
+  </button>
+</div>
+
+<button class="btn btn-danger mt-5" routerLink="/home/frameworks">
+  Ir al Listado
+</button>
+<router-outlet></router-outlet>
