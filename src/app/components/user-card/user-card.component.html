@@ -1,0 +1,18 @@
+@if(user()){
+<div class="card">
+  <div class="card-header">Nombre: {{ user().name }}</div>
+  <div class="card-body">
+    <h4 class="card-title">Email: {{ user().email }}</h4>
+    <p class="card-text">{{ user().phone }}</p>
+    <p class="card-text">Dirección:{{ user().address | json }}</p>
+  </div>
+  <div class="card-footer text-muted">
+    <a [href]="user().website" class="btn btn-primary">Ver Sitio</a>
+    <button class="btn btn-outline-danger" [routerLink]="['/user/', user().id]">
+      Ver Detalles
+    </button>
+  </div>
+</div>
+} @else {
+<p>No hay datos</p>
+}
